@@ -43,6 +43,3 @@ const carSlice = createSlice({
 
 export const { addFavorite, deleteFavorite } = carSlice.actions;
 export const carReducer = carSlice.reducer;
-export const selectCars = (state) => state.cars.carsData;
-export const selectisLoading = (state) => state.cars.isLoading;
-export const selectFavorites = (state) => state.cars.favorites;

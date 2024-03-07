@@ -1,32 +1,36 @@
-import {
-	SearchbarHeader,
-	SearchForm,
-	SearchFormButton,
-	SearchFormButtonLabel,
-	SearchFormInput,
-} from "./SearchBar.styled";
+import { Autocomplete, TextField } from "@mui/material";
+import { useState } from "react";
+import { searchBarStyle } from "./SearchBarStyle";
 
-const Searchbar = () => {
-	const handleSubmit = (event) => {
-		event.preventDefault();
-	};
+const SearchBar = ({ opts }) => {
+	const [value, setValue] = useState(null);
+	const [inputValue, setInputValue] = useState("");
+
 	return (
-		<SearchbarHeader>
-			<SearchForm onSubmit={handleSubmit}>
-				<SearchFormButton type="submit">
-					<SearchFormButtonLabel>Search</SearchFormButtonLabel>
-				</SearchFormButton>
-
-				<SearchFormInput
-					type="text"
-					name="search"
-					autoComplete="off"
-					autoFocus
-					placeholder="Search images
-          and photos"></SearchFormInput>
-			</SearchForm>
-		</SearchbarHeader>
+		<>
+			<Autocomplete
+				value={value}
+				onChange={(event, newValue) => {
+					setValue(newValue);
+				}}
+				inputValue={inputValue}
+				onInputChange={(event, newInputValue) => {
+					setInputValue(newInputValue);
+				}}
+				id="cars"
+				options={opts}
+				sx={searchBarStyle}
+				renderInput={(params) => {
+					return (
+						<TextField
+							placeholder="Enter the text"
+							{...params}
+						/>
+					);
+				}}
+			/>
+		</>
 	);
 };
 
-export default Searchbar;
+export default SearchBar;
