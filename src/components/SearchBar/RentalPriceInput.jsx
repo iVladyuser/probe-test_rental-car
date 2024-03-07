@@ -1,8 +1,8 @@
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
-import { searchBarStyle } from "./SearchBarStyle";
+import { inputPriceStyle } from "./SearchBarStyle";
 
-const SearchBar = ({ opts }) => {
+const RentalPriceInput = ({ opts }) => {
 	const [value, setValue] = useState(null);
 	const [inputValue, setInputValue] = useState("");
 
@@ -19,11 +19,11 @@ const SearchBar = ({ opts }) => {
 				}}
 				id="cars"
 				options={opts}
-				sx={searchBarStyle}
+				sx={inputPriceStyle}
 				renderInput={(params) => {
 					return (
 						<TextField
-							placeholder="Enter the text"
+							placeholder="To $"
 							{...params}
 						/>
 					);
@@ -33,4 +33,4 @@ const SearchBar = ({ opts }) => {
 	);
 };
 
-export default SearchBar;
+export default RentalPriceInput;
