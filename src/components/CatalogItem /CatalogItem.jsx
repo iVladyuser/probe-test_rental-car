@@ -25,6 +25,7 @@ const CatalogItem = ({ car }) => {
 		rentalPrice,
 		rentalCompany,
 		address,
+		fuelConsumption,
 	} = car;
 
 	return (
@@ -52,7 +53,7 @@ const CatalogItem = ({ car }) => {
 							marginBottom: "8px",
 						}}>
 						<Typography sx={mainTextStyle}>
-							{make} <span style={{ color: "#121417" }}>{model}</span>, 2019
+							{make} <span style={{ color: "#121417" }}>{model}</span>, {year}
 						</Typography>
 						<Typography sx={mainTextStyle}>{rentalPrice}</Typography>
 					</Box>
@@ -113,13 +114,13 @@ const CatalogItem = ({ car }) => {
 							<Typography
 								aria-label="Model Year"
 								sx={additionalTextStyle}>
-								{year}
+								{engineSize}
 							</Typography>
 							<Divider />
 							<Typography
 								aria-label="Engine size"
 								sx={additionalTextStyle}>
-								{engineSize}
+								{fuelConsumption} L/100
 							</Typography>
 						</Box>
 					</Box>
