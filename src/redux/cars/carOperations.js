@@ -12,12 +12,20 @@ export const getCars = createAsyncThunk(
 			const { data } = await instance.get("/adverts", {
 				params: { page, limit: 12 },
 			});
-			return data;
+
+			const randomCars = getRandomItems(data, 12);
+
+			return randomCars;
 		} catch (error) {
 			return thunkAPI.rejectWithValue(error.response.data.message);
 		}
 	}
 );
+
+function getRandomItems(array, count) {
+	const shuffled = array.sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+}
 
 export const getFilteredCars = createAsyncThunk(
 	"cars/getAll",
