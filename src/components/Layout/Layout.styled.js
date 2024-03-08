@@ -12,7 +12,7 @@ export const HeaderStyled = styled.header`
 	align-items: center;
 	justify-content: space-between;
 
-	padding: 5px 20px;
+	padding: 5px 30px;
 	margin-bottom: 16px;
 	border-bottom: 1px solid black;
 	margin: 0 auto;
@@ -26,7 +26,7 @@ export const HeaderStyled = styled.header`
 
 export const NavStyled = styled.nav`
 	display: flex;
-	margin-right: 70px;
+	margin-right: 80px;
 	width: 100%;
 	justify-content: center;
 	gap: 30px;
@@ -35,6 +35,7 @@ export const NavStyled = styled.nav`
 
 export const StyledNavLink = styled(NavLink)`
 	padding: 8px 16px;
+	font-size: 22px;
 	border-radius: 4px;
 	text-decoration: none;
 	color: #b6aaaa;
