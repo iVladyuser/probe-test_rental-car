@@ -42,10 +42,6 @@ export const StyledNavLink = styled(NavLink)`
 
 	&.active {
 		color: white;
-		background-color: #0b44cd;
+		/* background-color: #0b44cd; */
 	}
-`;
-
-export const Container = styled.div`
-	padding: 15px;
 `;

@@ -71,3 +71,38 @@ export const mainButtonStyle = {
 		backgroundColor: "#0b44cd",
 	},
 };
+
+export const boxStyle = {
+	backgroundColor: "black",
+	display: "flex",
+	justifyContent: "space-between",
+	alignItems: "center",
+	width: "100%",
+	height: "100%",
+};
+
+export const boxMainStyle = {
+	color: "#fff",
+	height: "100vh",
+	width: "800px",
+};
+
+export const homeMainTextStyle = {
+	color: "#fff",
+	fontFamily: "Manrope sans-serif",
+	fontSize: "76px",
+	fontWeight: "700",
+	lineHeight: "24px",
+};
+
+export const homeTextStyle = {
+	color: "#b6aaaa;",
+	fontFamily: "Manrope sans-serif",
+	fontSize: "20px",
+	fontStyle: "normal",
+	fontWeight: "400",
+	lineHeight: "26px",
+	wordWrap: "unset",
+	overflow: "hidden",
+	textOverflow: "clip",
+};
