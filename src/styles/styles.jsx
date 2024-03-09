@@ -97,8 +97,12 @@ export const homeMainTextStyle = {
 	fontSize: "96px",
 	fontWeight: "700",
 	lineHeight: "24px",
-	"@media screen and (max-width: 480px)": {
-		fontSize: "62px",
+	"@media screen and (max-width: 1100px)": {
+		fontSize: "57px",
+	},
+	"@media screen and (min-width: 1150px)": {
+		maxWidth: "1439px",
+		fontSize: "74px",
 	},
 };
 
@@ -108,7 +112,7 @@ export const homeTextStyle = {
 	fontSize: "26px",
 	fontStyle: "normal",
 	fontWeight: "500",
-	lineHeight: "26px",
+	lineHeight: "32px",
 	wordWrap: "unset",
 	overflow: "hidden",
 	textOverflow: "clip",
@@ -128,7 +132,7 @@ export const homeBtnBox = {
 export const homeButtonStyle = {
 	textTransform: "none",
 	color: "#fff",
-	padding: "26px 36px",
+	padding: "26px 34px",
 	fontFamily: ["Manrope", "sans-serif"].join(","),
 	fontSize: "24px",
 	fontStyle: "normal",
@@ -155,6 +159,17 @@ export const homeButtonStyle = {
 
 	"@media screen and (max-width: 480px)": {
 		fontSize: "16px",
-		padding: "14px 30px",
+		padding: "14px 16px",
+	},
+	"@media screen and (max-width: 1399px)": {
+		fontSize: "16px",
+		padding: "22px 30px",
+	},
+};
+
+export const cardMediaStyle = {
+	marginTop: "160px",
+	"@media screen and (max-width: 1399px)": {
+		width: "650px",
 	},
 };

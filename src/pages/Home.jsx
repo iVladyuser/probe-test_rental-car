@@ -1,12 +1,13 @@
 import { Typography, Box, CardMedia, Hidden } from "@mui/material";
 import hero from "../components/img/hero.jpg";
-import { homeButtonStyle, homeBtnBox } from "../styles/styles";
-
 import {
+	homeButtonStyle,
+	homeBtnBox,
 	boxMainStyle,
 	boxStyle,
 	homeMainTextStyle,
 	homeTextStyle,
+	cardMediaStyle
 } from "../styles/styles";
 import { MainButton } from "../components";
 import { Link } from "react-router-dom";
@@ -53,7 +54,7 @@ export const Home = () => {
 			</Box>
 			<Hidden mdDown>
 				<CardMedia
-					sx={{ marginTop: "160px" }}
+					sx={cardMediaStyle}
 					component="img"
 					alt="car image"
 					height="500"
