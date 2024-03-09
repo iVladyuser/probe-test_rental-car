@@ -14,6 +14,10 @@ import { Divider } from "../icons/Divider";
 import { additionalTextStyle, mainTextStyle } from "./CatalogItemStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, deleteFavorite } from "../../redux/cars/carSlice";
+import { useState } from "react";
+import ModalCard from "../Modal/ModalCard";
+import ModalWrapper from "../Modal/ModalWrapper";
+
 const CatalogItem = ({ car }) => {
 	const {
 		id,
@@ -39,6 +43,13 @@ const CatalogItem = ({ car }) => {
 		} else {
 			dispatch(addFavorite(id));
 		}
+	};
+
+	const [openModal, setOpenModal] = useState(false);
+	const toggleModal = () => setOpenModal((prevState) => !prevState);
+
+	const handleButtonClick = () => {
+		toggleModal();
 	};
 
 	return (
@@ -151,9 +162,21 @@ const CatalogItem = ({ car }) => {
 						aria-label="add to favorites">
 						<FavorHeart isFavorites={isFavorites} />
 					</IconButton>
-					<MainButton sx={{ ...mainButtonStyle }}>Learn more</MainButton>
+					<MainButton
+						onClick={handleButtonClick}
+						sx={{ ...mainButtonStyle }}>
+						Learn more
+					</MainButton>
 				</CardActions>
 			</Card>
+			<ModalWrapper
+				isOpen={openModal}
+				handleClose={handleButtonClick}>
+				<ModalCard
+					onClose={handleButtonClick}
+					car={car}
+				/>
+			</ModalWrapper>
 		</>
 	);
 };
