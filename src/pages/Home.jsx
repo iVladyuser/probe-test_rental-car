@@ -7,7 +7,7 @@ import {
 	boxStyle,
 	homeMainTextStyle,
 	homeTextStyle,
-	cardMediaStyle
+	cardMediaStyle,
 } from "../styles/styles";
 import { MainButton } from "../components";
 import { Link } from "react-router-dom";
@@ -21,7 +21,6 @@ export const Home = () => {
 						component="h1"
 						variant="h1"
 						color="inherit"
-						marginTop={25}
 						sx={homeMainTextStyle}>
 						Car rental.
 					</Typography>

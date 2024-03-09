@@ -29,7 +29,7 @@ export const Favorites = () => {
 					display: "flex",
 					justifyContent: "center",
 					gap: "18px",
-					margin: "60px auto",
+					margin: "70px auto",
 				}}></Box>
 			<Box
 				sx={{

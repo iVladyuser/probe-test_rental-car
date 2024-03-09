@@ -96,9 +96,11 @@ export const homeMainTextStyle = {
 	fontFamily: "Manrope sans-serif",
 	fontSize: "96px",
 	fontWeight: "700",
+	marginTop: "200px",
 	lineHeight: "24px",
 	"@media screen and (max-width: 1100px)": {
 		fontSize: "57px",
+		marginTop: "130px",
 	},
 	"@media screen and (min-width: 1150px)": {
 		maxWidth: "1439px",
