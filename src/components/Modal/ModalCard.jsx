@@ -1,4 +1,3 @@
-import MainButton from "../Buttons/MainButton";
 import {
 	Box,
 	Card,
@@ -16,8 +15,9 @@ import {
 	modalTitleStyle,
 	conditionsChipStyle,
 } from "./Modal.styled";
-import { mainButtonStyle } from "../../styles/styles";
-import CloseX from "../icons/CloseX";
+
+import { MainButton, CloseX } from "../../components";
+import { mainButtonStyle } from "../Buttons/ButtonsStyled";
 
 const ModalCard = (props) => {
 	const { onClose, car } = props;
@@ -40,7 +40,7 @@ const ModalCard = (props) => {
 		mileage,
 	} = car;
 
-	const companyNumber = "+380730000000";
+	const callNumber = "+380730000000";
 
 	return (
 		<Card
@@ -295,7 +295,7 @@ const ModalCard = (props) => {
 					<CloseX />
 				</IconButton>
 				<MainButton
-					href={`tel:${companyNumber}`}
+					href={`tel:${callNumber}`}
 					sx={mainButtonStyle}>
 					Rental car
 				</MainButton>

@@ -7,10 +7,9 @@ import {
 	IconButton,
 	Typography,
 } from "@mui/material";
-import { mainButtonStyle } from "../../styles/styles";
-import { MainButton } from "../../components";
-import { FavorHeart } from "../icons/FavorHeart";
-import { Divider } from "../icons/Divider";
+
+import { mainButtonStyle } from "../Buttons/ButtonsStyled";
+import { MainButton, FavorHeart, Divider } from "../../components";
 import { additionalTextStyle, mainTextStyle } from "./CatalogItemStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, deleteFavorite } from "../../redux/cars/carSlice";

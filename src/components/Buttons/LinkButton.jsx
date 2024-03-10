@@ -1,19 +1,13 @@
 import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { linkBtnStyle } from "./ButtonsStyled";
 
 const LinkButton = (props) => {
 	return (
 		<Button
 			variant="text"
 			component={NavLink}
-			sx={{
-				color: "#FFF",
-				borderRadius: "0px",
-				border: "none",
-				[`&.active`]: {
-					borderBottom: "2px solid white",
-				},
-			}}
+			sx={linkBtnStyle}
 			{...props}>
 			{props.children}
 		</Button>
