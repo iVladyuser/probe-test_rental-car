@@ -20,6 +20,9 @@ export const searchBarStyle = {
 			border: "none",
 		},
 	},
+	"& .MuiOutlinedInput-input::-webkit-input-placeholder": {
+		color: "#121417",
+	},
 	"&.MuiInput-input": {
 		fontFamily: ["Manrope", "sans-serif"].join(","),
 		fontSize: "18px",

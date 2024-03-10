@@ -8,7 +8,7 @@ import {
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { mainButtonStyle } from "../styles/styles";
+import { mainButtonStyle } from "../components/Buttons/ButtonsStyled";
 import { selectCars } from "../redux/cars/carSelectors";
 import { getCars } from "../redux/cars/carOperations";
 import { selectisLoading } from "../redux/cars/carSelectors";

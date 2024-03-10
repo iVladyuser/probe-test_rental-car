@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
-import { mainButtonStyle } from "../../styles/styles";
+import { mainButtonStyle } from "./ButtonsStyled";
+
 
 const MainButton = (props) => {
 	return (
