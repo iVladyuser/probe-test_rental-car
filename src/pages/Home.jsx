@@ -8,7 +8,7 @@ import {
 	homeMainTextStyle,
 	homeTextStyle,
 	cardMediaStyle,
-} from "../styles/styles";
+} from "../styles/homePageStyles";
 import { MainButton } from "../components";
 import { Link } from "react-router-dom";
 

@@ -1,4 +1,3 @@
-export { default as SearchBar } from "./SearchBar/SearchBar.jsx";
 export { default as CarMakeInput } from "./SearchBar/CarMakeInput.jsx";
 
 export { default as CatalogItem } from "./CatalogItem /CatalogItem.jsx";
