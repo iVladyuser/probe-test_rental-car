@@ -1,4 +1,4 @@
-export const searchBarStyle = {
+export const inputMakesStyle = {
 	display: "flex",
 	alignItems: "center",
 	width: "224px",

@@ -1,5 +1,5 @@
 import {
-	SearchBar,
+	CarMakeInput,
 	Loader,
 	CatalogItem,
 	MainButton,
@@ -56,7 +56,8 @@ const Catalog = () => {
 					gap: "18px",
 					margin: "150px auto 50px",
 				}}>
-				<SearchBar opts={[...new Set(carMakes)]} />
+				<CarMakeInput opts={[...new Set(carMakes)]} />
+
 				<MainButton
 					type={"submit"}
 					sx={{ ...mainButtonStyle, padding: "14px 44px" }}>

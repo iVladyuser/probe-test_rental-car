@@ -11,6 +11,11 @@ import {
 import { mainButtonStyle } from "../Buttons/ButtonsStyled";
 import { MainButton, FavorHeart, Divider } from "../../components";
 import { additionalTextStyle, mainTextStyle } from "./CatalogItemStyles";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite, deleteFavorite } from "../../redux/cars/carSlice";
+import { useState } from "react";
+import ModalCard from "../Modal/ModalCard";
+import ModalWrapper from "../Modal/ModalWrapper";
 
 const CatalogItem = ({ car }) => {
 	const {
@@ -26,6 +31,25 @@ const CatalogItem = ({ car }) => {
 		address,
 		fuelConsumption,
 	} = car;
+
+	const dispatch = useDispatch();
+
+	const isFavorites = useSelector((state) => state.cars.favorites.includes(id));
+
+	const handleFavoriteClick = () => {
+		if (isFavorites) {
+			dispatch(deleteFavorite(id));
+		} else {
+			dispatch(addFavorite(id));
+		}
+	};
+
+	const [openModal, setOpenModal] = useState(false);
+	const toggleModal = () => setOpenModal((prevState) => !prevState);
+
+	const handleButtonClick = () => {
+		toggleModal();
+	};
 
 	return (
 		<>
@@ -128,17 +152,30 @@ const CatalogItem = ({ car }) => {
 					disableSpacing={true}
 					sx={{ padding: "0" }}>
 					<IconButton
+						onClick={handleFavoriteClick}
 						sx={{
 							position: "absolute",
 							top: "6px",
 							right: "6px",
 						}}
 						aria-label="add to favorites">
-						<FavorHeart />
+						<FavorHeart isFavorites={isFavorites} />
 					</IconButton>
-					<MainButton sx={{ ...mainButtonStyle }}>Learn more</MainButton>
+					<MainButton
+						onClick={handleButtonClick}
+						sx={{ ...mainButtonStyle }}>
+						Learn more
+					</MainButton>
 				</CardActions>
 			</Card>
+			<ModalWrapper
+				isOpen={openModal}
+				handleClose={handleButtonClick}>
+				<ModalCard
+					onClose={handleButtonClick}
+					car={car}
+				/>
+			</ModalWrapper>
 		</>
 	);
 };
